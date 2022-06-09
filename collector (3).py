@@ -3,7 +3,7 @@
 import sys,socket,threading,struct,time
 
 HOST="127.0.0.1"
-PORT=65432
+PORT=57689
 
 
 def gestisci_connessione(conn,addr,a,s):
