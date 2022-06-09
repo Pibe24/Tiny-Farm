@@ -7,7 +7,7 @@
 #include "xerrori.h"
 
 #define HOST "127.0.0.1"
-#define PORT 65432
+#define PORT 57689
 #define QUI __LINE__,__FILE__
 
 //funzione writen per andare a scrivere nel socket tutti i byte
