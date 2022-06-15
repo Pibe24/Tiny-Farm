@@ -1,3 +1,5 @@
 # Tiny-Farm
 progetto (ridotto) laboratorio2 anno 2021/2022 (corso b)
 in questo file ci sono le scelte implementative
+Per quanto riguarda l'invio dei messaggi dal client al server , ho deciso di mandare tutti messaggi di lunghezza di 256 caratteri(completati poi dal client con degli 0 in fondo, onde evitare sporcature al momento della ricezione e che siano tutti lunghi ugugale).Ho aperto una connessione per ogni thread che si va a chiudere quaando il thread termina. Sono andato a scrivere nei socket conla funzione writen che mi garantisce che tutti i caratteri vengano scritti e non solo una parte (andando cosi a compromettere la validità dei messaggi inviati). Lo stesso ho fatto nel collector.py dove per ricevere, ho uutilizzato recv_all in modo da ricevere tutti i caratteri e non solo una parte.
+Quando arriva il messaggio di terminazione al collector.py vado a fare socket.shutdown()che mi lancia una eccezzione che,catturata dal try execpt, mi permette di andare a fare la socket.close() e terminare il server.
