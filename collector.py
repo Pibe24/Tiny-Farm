@@ -67,6 +67,7 @@ def contains(name,string):
 def main(host=HOST,port=PORT):
 
   with socket.socket(socket.AF_INET,socket.SOCK_STREAM) as s:
+    s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     s.bind((host,port))
     s.listen()
     #try per andare a catturare l'errore della socket shutdown
