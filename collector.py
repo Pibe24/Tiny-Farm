@@ -20,8 +20,8 @@ def gestisci_connessione(conn,addr,s):
       #vado a leggere due interi
       
       #leggo il nome del file come stringa
-      data = recv_all(conn,255)
-      assert len(data)==255
+      data = recv_all(conn,256)
+      assert len(data)==256
       nome= data.decode("utf-8")
 
       if contains(nome,'fine'):
