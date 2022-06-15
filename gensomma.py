@@ -2,7 +2,6 @@
 
 
 
-# farm z0.dat z1.dat z2.dat6355299 z3.dat-1906813 z4.dat1309651
 # crea un file contenente n interi 
 # mette la sua somma i*a[i] nel nome 
 
